@@ -44,18 +44,11 @@ SRCS_BONUS = ft_lstnew.c	\
 	ft_lstmap.c				\
 	$(SRCS)
 
-
 NAME = libft.a
-
-#OBJS_DIR = objs/
 
 OBJS = $(SRCS:.c=.o)
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
-
-#OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))
-
-#OBJS_BONUS = $(addprefix $(OBJS_DIR), $(SRCS_BONUS:.c=.o))
 
 CC = cc
 
@@ -63,10 +56,10 @@ AR = ar rc
 
 RM = rm -rf
 
-CC_FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
-%.o: ${SRCS} libft.h
-	@${CC} ${CFLAGS} -c $< -o $@
+.c.o:
+	@${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME): $(OBJS)
 	@${AR} $(NAME) $(OBJS)
