@@ -6,7 +6,7 @@
 /*   By: bvkm <bvkm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 23:01:01 by bvkm              #+#    #+#             */
-/*   Updated: 2024/03/22 14:13:18 by bvkm             ###   ########.fr       */
+/*   Updated: 2024/03/22 19:18:33 by bvkm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include <stdio.h>
 
 typedef struct s_list
 {
