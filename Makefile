@@ -47,7 +47,7 @@ SRCS_BONUS = ft_lstnew.c	\
 
 NAME = libft.a
 
-OBJS_DIR = objs/
+#OBJS_DIR = objs/
 
 OBJS = $(SRCS:.c=.o)
 
@@ -65,8 +65,7 @@ RM = rm -rf
 
 CC_FLAGS = -Wall -Wextra -Werror
 
-$(OBJS_DIR)%.o: ${SRCS} libft.h
-	@mkdir -p $(OBJS_DIR)
+%.o: ${SRCS} libft.h
 	@${CC} ${CFLAGS} -c $< -o $@
 
 $(NAME): $(OBJS)
