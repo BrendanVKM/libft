@@ -79,4 +79,4 @@ bonus: $(OBJS_BONUS)
 	@${AR} ${NAME} $(OBJS_BONUS)
 	@echo "libft with bonus created !"
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

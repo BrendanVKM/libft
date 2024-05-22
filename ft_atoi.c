@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bvkm <bvkm@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:39:24 by bvkm              #+#    #+#             */
-/*   Updated: 2024/03/20 23:26:50 by bvkm             ###   ########.fr       */
+/*   Updated: 2024/05/22 10:39:15 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_white_space(char const c)
+static int	ft_white_space(const char c)
 {
 	return (c == ' ' || c == '\f' || c == '\n'
 		|| c == '\r' || c == '\t' || c == '\v');
 }
 
-int	ft_atoi(char const *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	neg;
