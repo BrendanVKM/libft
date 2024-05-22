@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 23:01:01 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 20:02:09 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/22 20:30:29 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdint.h>
 #include <stdio.h>
 
 typedef struct s_list
@@ -29,7 +30,7 @@ void	ft_bzero(void *ptr, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	*ft_calloc(size_t count, size_t size );
+void	*ft_calloc(size_t nmemb, size_t size );
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(void *));

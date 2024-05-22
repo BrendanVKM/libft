@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:55:06 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 20:02:09 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/22 22:46:47 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
 	char	*d;
 	char	*s;
 
-	i = 0;
 	d = (char *)dst;
 	s = (char *)src;
 	if (!dst || !src)
@@ -29,11 +27,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (i < len)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		ft_memcpy(dst, src, len);
 	}
 	return (dst);
 }
+
+// int	main(int ac, char **av)
+// {
+// 	(void)ac;
+// 	printf("%s | %s\n", (char*)ft_memmove(av[1], av[2], ft_strlen(av[1])), (char*)memmove(av[1], av[2], ft_strlen(av[1])));
+// 	printf("%s\n", ft_memmove(av[1], av[2], ft_strlen(av[1])) == memmove(av[1], av[2], ft_strlen(av[1])) ? "OK" : "KO");
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:41:22 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 20:02:09 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/22 23:46:56 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,14 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 	return (s1[i] - s2[i]);
 }
 
+// int	main(void)
+// {
+// 	char str1[] = "Hello";
+//     char str2[] = "Hello, world!";
+//     size_t n = strlen(str2);
+	
+// 	printf("%d | %d\n", ft_memcmp(str1, str2, n), memcmp(str1, str2, n));
+// 	printf("%s\n", ft_memcmp(str1, str2, n) == memcmp(str1, str2, n)? "OK" : "KO");
+
+//     return 0;
+// }

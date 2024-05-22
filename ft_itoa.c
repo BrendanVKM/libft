@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bvkm <bvkm@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:40:23 by bvkm              #+#    #+#             */
-/*   Updated: 2024/03/22 15:04:19 by bvkm             ###   ########.fr       */
+/*   Updated: 2024/05/22 20:52:20 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,12 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 2)
+// 	{
+// 		printf("%s\n", ft_itoa(atoi(av[1])));
+// 	}
+// 	return (0);
+// }
