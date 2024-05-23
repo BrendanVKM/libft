@@ -6,11 +6,17 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:55:32 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 10:39:15 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 10:51:52 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// static char	ft_toupper_c(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	return (ft_toupper(c));
+// }
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
@@ -29,3 +35,12 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 2)
+// 	{
+// 		printf("%s\n", ft_strmapi(av[1], &ft_toupper_c));
+// 	}
+// 	return (0);
+// }

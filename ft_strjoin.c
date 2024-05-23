@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:53:32 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 10:39:15 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 10:25:42 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,12 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	str[len1 + len2] = '\0';
 	return (str);
 }
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 3)
+// 	{
+// 		printf("%s\n", ft_strjoin(av[1], av[2]));
+// 	}
+// 	return (0);
+// }

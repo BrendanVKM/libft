@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 23:01:01 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 20:30:29 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 10:54:57 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdint.h>
+
+#include <bsd/string.h>
 #include <stdio.h>
 
 typedef struct s_list

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bvkm <bvkm@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:41:54 by bvkm              #+#    #+#             */
-/*   Updated: 2024/03/20 22:41:56 by bvkm             ###   ########.fr       */
+/*   Updated: 2024/05/23 09:33:11 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,10 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar_fd(nb % 10 + '0', fd);
 }
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 2)
+// 		ft_putnbr_fd(atoi(av[1]), 1);
+// 	return (0);
+// }
