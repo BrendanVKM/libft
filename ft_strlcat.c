@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:42:55 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/23 11:04:38 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:15:11 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 // 		char *dst_2 = ft_strdup(av[2]);
 
 // 		size_t len = atoi(av[3]);
-// 		printf("%zu | %zu\n", ft_strlcat(dst_1, src, len), strlcat(dst_2, src, len));
+// 		printf("%zu | %zu\n", ft_strlcat(dst_1, src, len), strlcat(dst_2, src,
+//				len));
 // 		printf("%s | %s\n", dst_1, dst_2);
 // 		printf("%s\n", ft_strncmp(dst_1, dst_2, len) == 0 ? "OK" : "KO");
 // 	}

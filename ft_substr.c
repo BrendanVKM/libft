@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:44:09 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/23 12:58:29 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:16:01 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		return (NULL);
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
-
 }
 
 // int	main(int ac, char **av)

@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:44:06 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/23 12:46:42 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:40:15 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	size_t	i;
-	size_t	j;
+	size_t	start;
+	size_t	end;
 	char	*str;
 
 	if (!s1 || !set)
-		return (NULL);
-	i = 0;
-	j = ft_strlen(s1) - 1;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+		return (ft_strdup(""));
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end - 1]))
+		end--;
+	str = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!str)
 		return (NULL);
-	while (s1[i] && ft_strchr(set, s1[i]))
-		i++;
-	while (s1[j] && ft_strchr(set, s1[j]) && j > i)
-		j--;
-	ft_strlcpy(str, &s1[i], j - i + 2);
+	ft_strlcpy(str, s1 + start, end - start + 1);
 	return (str);
 }
 

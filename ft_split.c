@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:56:38 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/23 09:56:51 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:14:45 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ static char	*ft_strndup(const char *src, int s, int e)
 
 static char	**ft_spliting(const char *str, char c, char **strs)
 {
-	int		i;
-	int		j;
-	int		word;
+	int	i;
+	int	j;
+	int	word;
 
 	i = 0;
 	word = 0;
@@ -83,7 +83,6 @@ static char	**ft_spliting(const char *str, char c, char **strs)
 	}
 	strs[word] = NULL;
 	return (strs);
-	
 }
 
 char	**ft_split(const char *str, char c)
