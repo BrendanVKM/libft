@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:44:06 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 10:39:15 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 12:46:42 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,12 @@ char	*ft_strtrim(const char *s1, const char *set)
 	ft_strlcpy(str, &s1[i], j - i + 2);
 	return (str);
 }
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 3)
+// 	{
+// 		printf("%s\n", ft_strtrim(av[1], av[2]));
+// 	}
+// 	return (0);
+// }

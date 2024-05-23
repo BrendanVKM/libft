@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:44:16 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 10:06:15 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/23 13:00:13 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ int	ft_toupper(int c)
 		return (c - 'a' + 'A');
 	return (c);
 }
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 2)
+// 	{
+// 		printf("%c\n", ft_toupper(av[1][0]));
+// 	}
+// 	return (0);
+// }

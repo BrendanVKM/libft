@@ -69,14 +69,28 @@ all: $(NAME)
 
 clean:
 	@${RM} $(OBJS)
+	@echo "object (without bonus) clean!"
 
 fclean: clean
 	@${RM} $(NAME)
+	@echo "libft deleted !"
 
 re: fclean all
+	@echo "libft reloaded !"
 
 bonus: $(OBJS_BONUS)
 	@${AR} ${NAME} $(OBJS_BONUS)
 	@echo "libft with bonus created !"
 
-.PHONY: all clean fclean re bonus
+cleanbonus:
+	@${RM}  $(OBJS_BONUS)
+	@echo "object and object bonus deleted !"
+
+fcleanbonus: cleanbonus
+	@${RM} $(NAME)
+	@echo "libft deleted !"
+
+rebonus : fcleanbonus bonus
+	@echo "libft with bonus reloaded !"
+
+.PHONY: all clean fclean re bonus cleanbonus fcleanbonus rebonus
