@@ -1,40 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:41:05 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/22 23:55:25 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/24 11:56:17 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static t_list	*ft_lstmap_iter(t_list *lst, void *(*f)(void *),
+		void (*del)(void *), t_list *head)
+{
+	t_list	*new_elem;
+	t_list	*tmp;
+	void	*content;
+
+	tmp = head;
+	while (lst)
+	{
+		content = f(lst->content);
+		new_elem = ft_lstnew(content);
+		if (!new_elem)
+		{
+			del(content);
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		tmp->next = new_elem;
+		tmp = new_elem;
+		lst = lst->next;
+	}
+	tmp->next = NULL;
+	return (head);
+}
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*tmp;
+	t_list	*head;
+	void	*content;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	new_lst = ft_lstnew(f(lst->content));
-	if (!new_lst)
-		return (NULL);
-	tmp = new_lst;
-	lst = lst->next;
-	while (lst)
+	content = f(lst->content);
+	head = ft_lstnew(content);
+	if (!head)
 	{
-		new_lst->next = ft_lstnew(f(lst->content));
-		if (!new_lst->next)
-		{
-			ft_lstclear(&tmp, del);
-			return (NULL);
-		}
-		new_lst = new_lst->next;
-		lst = lst->next;
+		del(content);
+		return (NULL);
 	}
-	new_lst->next = NULL;
-	return (tmp);
+	lst = lst->next;
+	return (ft_lstmap_iter(lst, f, del, head));
 }
