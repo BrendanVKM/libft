@@ -6,7 +6,7 @@
 /*   By: bvictoir <bvictoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:56:09 by bvkm              #+#    #+#             */
-/*   Updated: 2024/05/23 11:25:17 by bvictoir         ###   ########.fr       */
+/*   Updated: 2024/05/29 10:09:11 by bvictoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	i = 0;
-	if (!s ||!f)
+	if (!s || !f)
 		return ;
 	while (s[i])
 	{
